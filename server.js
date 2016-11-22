@@ -10,17 +10,26 @@ var config = {
 }
 
 var tweets = require('./tweets.json');
-
+var T = new Twit(config);
 
 
 function pickTweet(data){
   return data[Math.floor(Math.random()*data.length)];
 }
 
-var T = new Twit(config);
+var probability = Math.random();
 
-T.post('statuses/update', {
-  status: pickTweet(tweets.tweets)
-}, function(err, data, response){
-  console.log(data);
-})
+if (probability > 0.96){
+  console.log('will tweet');
+  console.log(probability);
+
+  T.post('statuses/update', {
+    status: pickTweet(tweets.tweets)
+  }, function(err, data, response){
+    console.log(data);
+  });
+}
+else {
+  console.log('no tweet')
+  console.log(probability);
+}
