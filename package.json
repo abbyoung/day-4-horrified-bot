@@ -1,0 +1,15 @@
+{
+  "name": "horrified-bot",
+  "version": "1.0.0",
+  "description": "A Twitter bot that really can't believe it.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Abigail Young",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
