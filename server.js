@@ -19,8 +19,8 @@ function pickTweet(data){
 
 var T = new Twit(config);
 
-// T.post('statuses/update', {
-//   status: pickTweet(tweets.tweets)
-// }, function(err, data, response){
-//   console.log(data);
-// })
+T.post('statuses/update', {
+  status: pickTweet(tweets.tweets)
+}, function(err, data, response){
+  console.log(data);
+})
